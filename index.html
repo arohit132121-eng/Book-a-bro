@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>Book A Bro — Connect. Hangout. Discover.</title>
+    <meta
+      name="description"
+      content="Book A Bro — Connect, Hangout, Discover. A modern Gen Z-friendly platform to chat, chill, and hangout. Download Android APK."
+    />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root{
+        --sky-50: #f4fbff;
+        --sky-200: #d8f0ff;
+        --sky-400: #6ecbff;
+        --sky-500: #3db0ff;
+        --glass-border: rgba(255,255,255,0.35);
+        --glass-bg: rgba(255,255,255,0.06);
+      }
+      html,body{height:100%}
+      body{
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+        background: radial-gradient(1200px 600px at 10% 10%, rgba(110,203,255,0.06), transparent 10%),
+                    radial-gradient(900px 450px at 90% 80%, rgba(155,125,255,0.04), transparent 10%),
+                    linear-gradient(180deg,#ffffff 0%, #f7fbff 100%);
+        color: #0f172a;
+      }
+
+      /* Glass card base */
+      .glass {
+        background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.14));
+        border: 1px solid var(--glass-border);
+        -webkit-backdrop-filter: blur(10px) saturate(110%);
+        backdrop-filter: blur(10px) saturate(110%);
+        box-shadow: 0 6px 30px rgba(16,24,40,0.06);
+      }
+
+      /* Sidebar glass stronger */
+      .glass-strong{
+        background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0.06));
+        border: 1px solid rgba(255,255,255,0.18);
+        -webkit-backdrop-filter: blur(16px) saturate(120%);
+        backdrop-filter: blur(16px) saturate(120%);
+        box-shadow: 0 10px 40px rgba(16,24,40,0.06);
+      }
+
+      /* soft icon circle */
+      .icon-circle {
+        background: linear-gradient(180deg, rgba(61,176,255,0.12), rgba(61,176,255,0.04));
+        border: 1px solid rgba(61,176,255,0.12);
+      }
+
+      /* subtle glow on primary CTA */
+      .cta-glow {
+        box-shadow: 0 8px 30px rgba(61,176,255,0.18), inset 0 -6px 18px rgba(255,255,255,0.04);
+      }
+
+      /* small helpers */
+      .glass-border-strong { border-color: rgba(255,255,255,0.45); }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page wrapper -->
+    <div class="min-h-screen flex items-center justify-center px-6 py-12">
+      <!-- main card -->
+      <div class="w-full max-w-[1200px] rounded-3xl overflow-hidden glass-strong">
+        <div class="grid grid-cols-1 md:grid-cols-12">
+          <!-- SIDEBAR -->
+          <aside class="md:col-span-3 p-6 md:p-8 bg-transparent">
+            <div class="flex flex-col h-full gap-6">
+              <!-- logo + title -->
+              <div class="flex items-center gap-3">
+                <div
+                  class="h-12 w-12 rounded-2xl flex items-center justify-center text-white font-extrabold"
+                  style="background: linear-gradient(135deg,var(--sky-400),var(--sky-500));"
+                >
+                  B
+                </div>
+                <div>
+                  <div class="text-sm font-semibold">Book A Bro</div>
+                  <div class="text-xs text-slate-500">Connect. Hangout. Discover.</div>
+                </div>
+              </div>
+
+              <!-- nav container (glass) -->
+              <nav class="glass p-3 rounded-2xl">
+                <ul class="flex flex-col gap-1">
+                  <li>
+                    <a href="#home" class="flex items-center gap-3 rounded-xl px-3 py-2 hover:bg-white/10 transition">
+                      <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg icon-circle">🏠</span>
+                      <span class="text-sm font-medium">Home</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about" class="flex items-center gap-3 rounded-xl px-3 py-2 hover:bg-white/10 transition">
+                      <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg icon-circle">ℹ️</span>
+                      <span class="text-sm font-medium">About</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#features" class="flex items-center gap-3 rounded-xl px-3 py-2 hover:bg-white/10 transition">
+                      <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg icon-circle">✨</span>
+                      <span class="text-sm font-medium">Features</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#screens" class="flex items-center gap-3 rounded-xl px-3 py-2 hover:bg-white/10 transition">
+                      <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg icon-circle">📱</span>
+                      <span class="text-sm font-medium">Screenshots</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#download" class="flex items-center gap-3 rounded-xl px-3 py-2 hover:bg-white/10 transition">
+                      <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg icon-circle">⬇️</span>
+                      <span class="text-sm font-medium">Download</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contact" class="flex items-center gap-3 rounded-xl px-3 py-2 hover:bg-white/10 transition">
+                      <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg icon-circle">✉️</span>
+                      <span class="text-sm font-medium">Contact</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+              <!-- small footer in sidebar -->
+              <div class="mt-auto text-xs text-slate-500">
+                © 2025 Book A Bro<br />
+                Made with ❤️ by Bro Team
+              </div>
+            </div>
+          </aside>
+
+          <!-- MAIN CONTENT -->
+          <main id="home" class="md:col-span-9 p-6 md:p-10">
+            <div class="flex flex-col md:flex-row gap-8">
+              <!-- LEFT: hero content -->
+              <div class="flex-1 flex flex-col justify-center gap-5">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-white/10 glass">
+                  <span class="text-sky-500">✨</span>
+                  <span class="text-slate-700">New — Android APK ready</span>
+                </div>
+
+                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+                  Book A Bro
+                </h1>
+                <p class="text-sky-500 font-semibold text-lg md:text-xl">
+                  Connect. Hangout. Discover.
+                </p>
+
+                <p class="max-w-xl text-slate-600">
+                  Your go-to chill spot to find a bro for late-night talks, study motivation, quick advice, or just someone to vibe with. Safe, private, and designed for Gen-Z energy.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-3 mt-3">
+                  <a
+                    href="bookabro.apk"
+                    class="inline-flex items-center gap-3 px-6 py-3 rounded-full text-sm font-semibold text-white"
+                    style="background: linear-gradient(90deg,var(--sky-400),var(--sky-500));"
+                  >
+                    ⬇ Download APK
+                  </a>
+
+                  <a
+                    href="#about"
+                    class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium glass border border-white/10"
+                  >
+                    Learn more
+                  </a>
+                </div>
+
+                <!-- quick stats glass -->
+                <div class="mt-6 flex gap-3">
+                  <div class="glass p-3 rounded-2xl flex-1">
+                    <div class="text-xs text-slate-500">Active bros</div>
+                    <div class="text-lg font-semibold">1.2k</div>
+                  </div>
+                  <div class="glass p-3 rounded-2xl flex-1">
+                    <div class="text-xs text-slate-500">Avg response</div>
+                    <div class="text-lg font-semibold">~45s</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- RIGHT: mockup + floating cards -->
+              <div class="w-full md:w-96 relative flex justify-center items-start">
+                <!-- floating background circles -->
+                <div class="absolute -left-10 -top-10 h-60 w-60 rounded-full" style="background: radial-gradient(circle at 20% 20%, rgba(110,203,255,0.18), transparent 30%); filter: blur(26px);"></div>
+                <div class="absolute right-0 top-10 h-48 w-48 rounded-full" style="background: radial-gradient(circle at 70% 70%, rgba(160,120,255,0.08), transparent 30%); filter: blur(36px);"></div>
+
+                <!-- phone mockup -->
+                <div class="relative">
+                  <div class="rounded-3xl overflow-hidden" style="width:240px;height:480px;background:linear-gradient(180deg,#ffffff,#f3f8ff);border:1px solid rgba(15,23,42,0.06);box-shadow:0 20px 50px rgba(13,45,92,0.08);">
+                    <!-- top bar -->
+                    <div class="p-4 bg-transparent">
+                      <div class="h-2 w-14 bg-slate-200 rounded-full mx-auto"></div>
+                    </div>
+                    <!-- main "screen" -->
+                    <div class="p-4 flex flex-col gap-3">
+                      <div class="rounded-xl p-3 glass">
+                        <div class="text-xs text-sky-500">Instant Chat · Live</div>
+                        <div class="font-semibold text-sm">Find a Bro</div>
+                        <div class="text-xs text-slate-500 mt-2">Peer chats • Hangouts • Advice</div>
+                      </div>
+
+                      <div class="rounded-xl p-3 bg-white border border-slate-100 text-center text-xs text-slate-400 mt-4">
+                        (App preview placeholder)
+                      </div>
+
+                      <div class="mt-auto">
+                        <button class="w-full rounded-full py-3 cta-glow text-white font-semibold" style="background:linear-gradient(90deg,var(--sky-400),var(--sky-500));">Start Hanging</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- floating small cards -->
+                  <div class="absolute -left-10 -top-6 glass p-2 rounded-lg text-xs shadow-md">
+                    Bro Vibes 😎
+                  </div>
+                  <div class="absolute -right-12 bottom-12 glass p-2 rounded-lg text-xs shadow-md">
+                    Safe Space 💙
+                  </div>
+                  <div class="absolute -right-8 top-12 glass p-2 rounded-lg text-xs shadow-md">
+                    Instant Chat ⏱️
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ABOUT -->
+            <section id="about" class="mt-12 grid md:grid-cols-2 gap-6 items-center">
+              <div>
+                <h3 class="text-2xl font-bold">What is <span class="text-sky-500">Book A Bro</span>?</h3>
+                <p class="mt-3 text-slate-600 max-w-xl">
+                  Book A Bro connects people for casual hangouts, late-night chats, study sessions and light support. It's low-pressure, judgement-free, and built for real conversations.
+                </p>
+
+                <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <li class="glass p-3 rounded-xl">
+                    <div class="text-sm font-semibold">Instant Bro Support</div>
+                    <div class="text-xs text-slate-500">Talk anytime with someone who gets you.</div>
+                  </li>
+                  <li class="glass p-3 rounded-xl">
+                    <div class="text-sm font-semibold">Fun Hangouts</div>
+                    <div class="text-xs text-slate-500">Play, vibe, and chill with bros.</div>
+                  </li>
+                  <li class="glass p-3 rounded-xl">
+                    <div class="text-sm font-semibold">Advice & Motivation</div>
+                    <div class="text-xs text-slate-500">Short guidance and pep-talks when you need them.</div>
+                  </li>
+                  <li class="glass p-3 rounded-xl">
+                    <div class="text-sm font-semibold">Daily Assistance</div>
+                    <div class="text-xs text-slate-500">Reminders, accountability, quick tasks.</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex items-center justify-center">
+                <div class="w-full max-w-md rounded-2xl glass p-6">
+                  <div class="text-sm text-slate-500">Community</div>
+                  <div class="text-2xl font-semibold mt-2">Join bros worldwide</div>
+                  <p class="text-xs text-slate-500 mt-3">Safe, moderated, and welcoming. Meet people who vibe with you.</p>
+                  <div class="mt-4">
+                    <a href="#download" class="inline-flex items-center gap-2 px-4 py-2 rounded-full" style="background:linear-gradient(90deg,var(--sky-400),var(--sky-500));color:white;">Get the APK</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- FEATURES -->
+            <section id="features" class="mt-10">
+              <div class="text-sm text-slate-500 mb-4">Features</div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass p-4 rounded-xl">
+                  <div class="text-2xl">🤝</div>
+                  <div class="font-semibold mt-2">Instant Support</div>
+                  <div class="text-xs text-slate-500 mt-1">Find someone to talk to within minutes.</div>
+                </div>
+                <div class="glass p-4 rounded-xl">
+                  <div class="text-2xl">🎮</div>
+                  <div class="font-semibold mt-2">Fun Hangouts</div>
+                  <div class="text-xs text-slate-500 mt-1">Game, chill or study together.</div>
+                </div>
+                <div class="glass p-4 rounded-xl">
+                  <div class="text-2xl">💬</div>
+                  <div class="font-semibold mt-2">Advice & Motivation</div>
+                  <div class="text-xs text-slate-500 mt-1">Quick pep talk or practical tips.</div>
+                </div>
+                <div class="glass p-4 rounded-xl">
+                  <div class="text-2xl">📅</div>
+                  <div class="font-semibold mt-2">Daily Assistance</div>
+                  <div class="text-xs text-slate-500 mt-1">Reminders & accountability checks.</div>
+                </div>
+              </div>
+            </section>
+
+            <!-- SCREENSHOTS -->
+            <section id="screens" class="mt-10">
+              <h4 class="text-lg font-semibold mb-3">Sneak Peek</h4>
+              <div class="flex gap-4 overflow-x-auto pb-3">
+                <div class="min-w-[200px] h-40 rounded-2xl bg-gradient-to-b from-sky-50 to-white flex items-center justify-center text-slate-600">Screenshot 1</div>
+                <div class="min-w-[200px] h-40 rounded-2xl bg-slate-900 text-white flex items-center justify-center">Chat View</div>
+                <div class="min-w-[200px] h-40 rounded-2xl bg-gradient-to-b from-sky-50 to-white flex items-center justify-center text-slate-600">Profile</div>
+              </div>
+            </section>
+
+            <!-- DOWNLOAD -->
+            <section id="download" class="mt-12">
+              <div class="glass rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                  <div class="text-sm text-slate-500">Get the app</div>
+                  <div class="text-2xl font-semibold">Download Book A Bro APK</div>
+                  <div class="text-xs text-slate-500 mt-1">v1.0.0 · Android · ~25MB</div>
+                </div>
+
+                <div class="flex gap-3">
+                  <a href="bookabro.apk" class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-white" style="background:linear-gradient(90deg,var(--sky-400),var(--sky-500));">⬇ Download APK</a>
+                  <button class="glass px-4 py-3 rounded-full">iOS coming soon</button>
+                </div>
+              </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact" class="mt-10">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass p-6 rounded-2xl">
+                  <h5 class="font-semibold">Talk to us</h5>
+                  <p class="text-xs text-slate-500 mt-1">Questions, collabs or press? Hit us up.</p>
+                  <div class="mt-4 text-sm">
+                    <div>📧 hello@bookabro.app</div>
+                    <div class="mt-2">📱 WhatsApp: +91 98765 43210</div>
+                  </div>
+                </div>
+
+                <form class="glass p-6 rounded-2xl">
+                  <div class="grid gap-3">
+                    <input class="p-3 rounded-lg border border-white/10 bg-white/5 text-sm" placeholder="Your name" />
+                    <input class="p-3 rounded-lg border border-white/10 bg-white/5 text-sm" placeholder="Email" />
+                    <textarea class="p-3 rounded-lg border border-white/10 bg-white/5 text-sm" rows="4" placeholder="Message"></textarea>
+                    <button class="px-4 py-3 rounded-full text-white" style="background:linear-gradient(90deg,var(--sky-400),var(--sky-500));">Send Message</button>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- small helpful script: smooth scrolling -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', e=>{
+          const t = document.querySelector(a.getAttribute('href'));
+          if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
+        });
+      });
+    </script>
+  </body>
+</html>
