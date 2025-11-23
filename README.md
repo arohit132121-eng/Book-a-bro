@@ -107,11 +107,11 @@ Submit a pull request
 
 If you want help with your first PR, feel free to open an issue.
 
-📝 License
+License
 
 This project is released under the MIT License, meaning you can use, modify, and distribute it freely.
 
-💬 Creator
+Creator
 
 Rohit M (arohit132121-eng)
 15-year-old Student • Editor • Creator • Founder of Book-a-Bro
